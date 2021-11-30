@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import EmployeeService from '../services/EmployeeService';
 import { Icon } from './Signin/SigninElements';
-
+import {NavBtnLink2} from './Navbar/NavbarElements';
 
 class ListEmployeeComponent extends Component {
     constructor(props) {
@@ -84,6 +84,9 @@ class ListEmployeeComponent extends Component {
                     
                     </div>
                 </div>
+                <NavBtnLink2 to="/position"  >Position</NavBtnLink2>
+                <NavBtnLink2 to="/hierarchy"  >Hierarchy</NavBtnLink2>
+                <NavBtnLink2 to="/leaveofabsence"  >Leave of Absence</NavBtnLink2>
             </div>
            
             
