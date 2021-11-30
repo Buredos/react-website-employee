@@ -16,7 +16,7 @@ class ListLeaveOfAbsenceComponent extends Component {
     }
 
     deleteLeaveOfAbsence(id){
-        LeaveOfAbsenceService.deleteEmployee(id).then( res => {
+        LeaveOfAbsenceService.deleteLeaveOfAbsence(id).then( res => {
             this.setState({leaveofabsence: this.state.leaveofabsence.filter(leaveofabsence => leaveofabsence.id !== id)});
         });
     }
