@@ -1,5 +1,6 @@
 import styled from 'styled-components'
 import { Link } from 'react-router-dom'
+import { Link as LinkR } from 'react-router-dom'
 
 export const Container = styled.div`
     min-height: 692px;
@@ -91,7 +92,8 @@ export const FormInput = styled.input`
     border-radius: 4px;
 `;
 
-export const FormButton = styled.button`
+export const NavBtnLink = styled(LinkR)`
+    text-align: center;
     background: #01bf71;
     padding: 16px 0;
     border: none;

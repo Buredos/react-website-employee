@@ -21,7 +21,7 @@ const Sidebar = ({isOpen, toggle}) => {
                     </SidebarLink>
 
                     <SidebarLink 
-                    to="classes" 
+                    to="view" 
                     onClick={toggle}
                     smooth={true} 
                     duration={500} 
@@ -29,11 +29,11 @@ const Sidebar = ({isOpen, toggle}) => {
                     exact='true' 
                     offset={-80}
                     >
-                        Manage Classes
+                        Viewing
                     </SidebarLink>
 
                     <SidebarLink 
-                    to="pto" 
+                    to="features" 
                     onClick={toggle}
                     smooth={true} 
                     duration={500} 
@@ -41,11 +41,11 @@ const Sidebar = ({isOpen, toggle}) => {
                     exact='true' 
                     offset={-80}
                     >
-                        PTO
+                        Features
                     </SidebarLink>
 
                     <SidebarLink 
-                    to="payroll" 
+                    to="ui" 
                     onClick={toggle}
                     smooth={true} 
                     duration={500} 
@@ -53,7 +53,7 @@ const Sidebar = ({isOpen, toggle}) => {
                     exact='true' 
                     offset={-80}
                     >
-                        Payroll
+                        UI
                     </SidebarLink>
                     
                 </SidebarMenu>

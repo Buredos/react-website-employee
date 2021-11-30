@@ -1,6 +1,6 @@
 import React from 'react'
 import { Button } from '../ButtonElement'
-
+import {animateScroll as scroll} from 'react-scroll';
 import { 
     InfoContainer,
     InfoWrapper,
@@ -15,6 +15,10 @@ import {
     ImgWrap, 
     Img }
     from './InfoElements'
+
+    const toggleHome = () => {
+        scroll.scrollToTop();
+    };
 
 const InfoSection = ({
     lightBg,
@@ -43,7 +47,8 @@ const InfoSection = ({
                                 <Heading lightText={lightText}>{headline}</Heading>
                                 <Subtitle darkText={darkText}>{description}</Subtitle>
                                 <BtnWrap>
-                                    <Button to='home' 
+                                    <Button to='/' 
+                                    onClick={toggleHome}
                                     smooth={true}
                                     duration={500}
                                     spy={true}
