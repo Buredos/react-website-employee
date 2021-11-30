@@ -46,9 +46,9 @@ const Footer = () => {
                         <FooterLinkItems>
                             <FooterLinkTitle>Employee Website</FooterLinkTitle>
                                 <FooterLink to="/">Employee Management</FooterLink>
-                                <FooterLink to="/">Classes</FooterLink>
-                                <FooterLink to="/">Career</FooterLink>
-                                <FooterLink to="/">PTO</FooterLink>
+                                <FooterLink to="/">Viewing</FooterLink>
+                                <FooterLink to="/">Features</FooterLink>
+                                <FooterLink to="/">UI</FooterLink>
                         </FooterLinkItems>
                         <FooterLinkItems>
                             <FooterLinkTitle>Social Media</FooterLinkTitle>
