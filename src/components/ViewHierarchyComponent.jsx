@@ -32,15 +32,19 @@ class ViewHierarchyComponent extends Component {
                     <div className = "card-body">
                         <div className = "row">
                             <label> Hierarchy First Names: </label>
-                            <div> {this.state.employee.first_name} </div>
+                            <div> {this.state.hierarchy.firstName} </div>
                         </div>
                         <div className = "row">
                             <label> Hierarchy Last Names: </label>
-                            <div> {this.state.employee.last_name} </div>
+                            <div> {this.state.hierarchy.lastName} </div>
                         </div>
                         <div className = "row">
                             <label> NIK: </label>
-                            <div> {this.state.employee.nik} </div>
+                            <div> {this.state.hierarchy.nIK} </div>
+                        </div>
+                        <div className = "row">
+                            <label> Pos Id: </label>
+                            <div> {this.state.hierarchy.posId} </div>
                         </div>
                     </div>
                      <button className="btn btn-danger" onClick={this.cancel.bind(this)} style={{marginLeft: "10px"}}>Go back</button>

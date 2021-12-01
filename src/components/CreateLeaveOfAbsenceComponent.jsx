@@ -8,15 +8,15 @@ class CreateLeaveOfAbsenceComponent extends Component {
 
         this.state = {
             id: this.props.match.params.id,
-            nik: '',
-            amount_of_leave: '',
-            leave_id: '',
-            type_of_leave:''
+            nIK: '',
+            amountOfLeave: '',
+            leaveId: '',
+            typeOfLeave:''
         }
-        this.changenikHandler = this.changenikHandler.bind(this);
-        this.changeamountofleaveHandler = this.changeamountofleaveHandler.bind(this);
-        this.changeleaveidHandler = this.changeleaveidHandler.bind(this);
-        this.changetypeofleaveHandler = this.changetypeofleaveHandler.bind(this);
+        this.changenIKHandler = this.changenIKHandler.bind(this);
+        this.changeamountOfLeaveHandler = this.changeamountOfLeaveHandler.bind(this);
+        this.changeleaveIdHandler = this.changeleaveIdHandler.bind(this);
+        this.changetypeOfLeaveHandler = this.changetypeOfLeaveHandler.bind(this);
         this.saveOrUpdateLeaveOfAbsence = this.saveOrUpdateLeaveOfAbsence.bind(this);
     }
 
@@ -27,9 +27,10 @@ class CreateLeaveOfAbsenceComponent extends Component {
         }else{
             LeaveOfAbsenceService.getLeaveOfAbsenceById(this.state.id).then( (res) =>{
                 let leaveofabsence = res.data;
-                this.setState({nik: leaveofabsence.nik,
-                    amount_of_leave: leaveofabsence.amount_of_leave,
-                    leave_id : leaveofabsence.leave_id
+                this.setState({nIK: leaveofabsence.nIK,
+                    amountOfLeave: leaveofabsence.amountOfLeave,
+                    typeOfLeave: leaveofabsence.typeOfLeave,
+                    leaveId : leaveofabsence.leaveId
                 });
             });
         }
@@ -38,7 +39,7 @@ class CreateLeaveOfAbsenceComponent extends Component {
 
     saveOrUpdateLeaveOfAbsence = (e) => {
         e.preventDefault();
-        let leaveofabsence = {nik: this.state.nik, amount_of_leave: this.state.amount_of_leave, leave_id: this.state.leave_id, type_of_leave: this.type_of_leave};
+        let leaveofabsence = {nIK: this.state.nIK, amountOfLeave: this.state.amountOfLeave, leaveId: this.state.leaveId, typeOfLeave: this.state.typeOfLeave};
         console.log('leaveofabsence => ' + JSON.stringify(leaveofabsence));
 
         if(this.state.id === '_add'){
@@ -54,19 +55,19 @@ class CreateLeaveOfAbsenceComponent extends Component {
         
     }
 
-    changenikHandler= (event) => {
-        this.setState({nik: event.target.value});
+    changenIKHandler= (event) => {
+        this.setState({nIK: event.target.value});
     }
 
-    changeamountofleaveHandler= (event) => {
-        this.setState({amount_of_leave: event.target.value});
+    changeamountOfLeaveHandler= (event) => {
+        this.setState({amountOfLeave: event.target.value});
     }
 
-    changeleaveidHandler= (event) => {
-        this.setState({leave_id: event.target.value});
+    changeleaveIdHandler= (event) => {
+        this.setState({leaveId: event.target.value});
     }
-    changetypeofleaveHandler= (event) => {
-        this.setState({type_of_leave: event.target.value});
+    changetypeOfLeaveHandler= (event) => {
+        this.setState({typeOfLeave: event.target.value});
     }
 
     cancel(){
@@ -92,25 +93,25 @@ class CreateLeaveOfAbsenceComponent extends Component {
                             <div className = "card-body">
                                 <form>
                                     <div className = "form-group">
-                                        <label> NIK: </label>
-                                        <input placeholder="NIK" name="nik" className="form-control"
-                                            value={this.state.nik} onChange={this.changenikHandler}/>
+                                        <label> nIK: </label>
+                                        <input placeholder="nIK" name="nIK" className="form-control"
+                                            value={this.state.nIK} onChange={this.changenIKHandler}/>
                                     </div>
                                     
                                     <div className = "form-group">
                                         <label> Leave id </label>
-                                        <input placeholder="Leave id" name="leave_id" className="form-control"
-                                            value={this.state.leave_id} onChange={this.changeleaveidHandler}/>
+                                        <input placeholder="Leave id" name="leaveId" className="form-control"
+                                            value={this.state.leaveId} onChange={this.changeleaveIdHandler}/>
                                     </div>
                                     <div className = "form-group">
                                         <label> Type of Leave: </label>
-                                        <input placeholder="Type of Leave" name="type_of_leave" className="form-control"
-                                            value={this.state.type_of_leave} onChange={this.changetypeofleaveHandler}/>
+                                        <input placeholder="Type of Leave" name="typeOfLeave" className="form-control"
+                                            value={this.state.typeOfLeave} onChange={this.changetypeOfLeaveHandler}/>
                                     </div>
                                     <div className = "form-group">
                                         <label> Amount of Leave: </label>
-                                        <input placeholder="Amount of Leave" name="amount_of_leave" className="form-control"
-                                            value={this.state.amount_of_leave} onChange={this.changeamountofleaveHandler}/>
+                                        <input placeholder="Amount of Leave" name="amountOfLeave" className="form-control"
+                                            value={this.state.amountOfLeave} onChange={this.changeamountOfLeaveHandler}/>
                                     </div>
 
                                     <button className="btn btn-success" onClick={this.saveOrUpdateLeaveOfAbsence} style={{marginTop: "15px"}}>Save</button>

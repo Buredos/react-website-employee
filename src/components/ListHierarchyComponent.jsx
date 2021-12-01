@@ -65,10 +65,10 @@ class ListHierarchyComponent extends Component {
                                             this.state.hierarchy.map(
                                                 hierarchy =>
                                                 <tr key = {hierarchy.id}>
-                                                    <td> {hierarchy.first_name} </td>
-                                                    <td> {hierarchy.last_name} </td>
-                                                    <td> {hierarchy.nik} </td>
-                                                    <td> {hierarchy.pos_id} </td>
+                                                    <td> {hierarchy.firstName} </td>
+                                                    <td> {hierarchy.lastName} </td>
+                                                    <td> {hierarchy.nIK} </td>
+                                                    <td> {hierarchy.posId} </td>
                                                     <td>
                                                         <button onClick = { () => this.editHierarchy(hierarchy.id)} className="btn btn-info">Update</button>
                                                         <button style= {{marginLeft: "10px"}} onClick = { () => this.deleteHierarchy(hierarchy.id)} className="btn btn-danger">Delete</button>

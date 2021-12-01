@@ -31,20 +31,20 @@ class ViewLeaveOfAbsenceComponent extends Component {
                     <h3 className = "text-center">Viewing Leave of Absence Details</h3>
                     <div className = "card-body">
                         <div className = "row">
-                            <label> Leave of Absence NIK: </label>
-                            <div> {this.state.leaveofabsence.nik} </div>
+                            <label> NIK: </label>
+                            <div> {this.state.leaveofabsence.nIK} </div>
                         </div>
                         <div className = "row">
-                            <label> Leave of Absence Leave id: </label>
-                            <div> {this.state.leaveofabsence.leave_id} </div>
+                            <label> Leave id: </label>
+                            <div> {this.state.leaveofabsence.leaveId} </div>
                         </div>
                         <div className = "row">
-                            <label> Leave of Absence Type of Leave: </label>
-                            <div> {this.state.leaveofabsence.type_of_leave} </div>
+                            <label> Type of Leave: </label>
+                            <div> {this.state.leaveofabsence.typeOfLeave} </div>
                         </div>
                         <div className = "row">
-                            <label> Leave of Absence Amount of Leave: </label>
-                            <div> {this.state.leaveofabsence.amount_of_leave} </div>
+                            <label> Amount of Leave: </label>
+                            <div> {this.state.leaveofabsence.amountOfLeave} </div>
                         </div>
                     </div>
                      <button className="btn btn-danger" onClick={this.cancel.bind(this)} style={{marginLeft: "10px"}}>Go back</button>

@@ -39,9 +39,46 @@ class ViewEmployeeComponent extends Component {
                             <div> {this.state.employee.lastName} </div>
                         </div>
                         <div className = "row">
-                            <label> Employee Email ID: </label>
-                            <div> {this.state.employee.emailId} </div>
+                            <label> Employee ID: </label>
+                            <div> {this.state.employee.nIK} </div>
                         </div>
+                        <div className = "row">
+                            <label> Employee Address: </label>
+                            <div> {this.state.employee.Address} </div>
+                        </div>
+                        <div className = "row">
+                            <label> Gender: </label>
+                            <div> {this.state.employee.Gender} </div>
+                        </div>
+                        <div className = "row">
+                            <label> Religion: </label>
+                            <div> {this.state.employee.Religion} </div>
+                        </div>
+                        <div className = "row">
+                            <label>  Birthday Date: </label>
+                            <div> {this.state.employee.birthDayDate} </div>
+                        </div>
+                        <div className = "row">
+                            <label>  Birthplace: </label>
+                            <div> {this.state.employee.birthPlace} </div>
+                        </div>
+                        <div className = "row">
+                            <label>  Phone Number: </label>
+                            <div> {this.state.employee.phonenNumber} </div>
+                        </div>
+                        <div className = "row">
+                            <label> Marital Status: </label>
+                            <div> {this.state.employee.maritalStatus} </div>
+                        </div>
+                        <div className = "row">
+                            <label> Date Entered Company: </label>
+                            <div> {this.state.employee.dayEnterCompany} </div>
+                        </div>
+                        <div className = "row">
+                            <label> Date Resigned: </label>
+                            <div> {this.state.employee.dayOutCompany} </div>
+                        </div>
+                        
                     </div>
                      <button className="btn btn-danger" onClick={this.cancel.bind(this)} style={{marginLeft: "10px"}}>Go back</button>
                 </div>

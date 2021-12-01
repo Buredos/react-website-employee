@@ -10,12 +10,12 @@ class CreateHierarchyComponent extends Component {
             id: this.props.match.params.id,
             firstName: '',
             lastName: '',
-            nik: '',
+            nIK: '',
             posId:''
         }
         this.changeFirstNameHandler = this.changeFirstNameHandler.bind(this);
         this.changeLastNameHandler = this.changeLastNameHandler.bind(this);
-        this.changenikHandler = this.changenikHandler.bind(this);
+        this.changenIKHandler = this.changenIKHandler.bind(this);
         this.changeposIdHandler = this.changeposIdHandler.bind(this);
         this.saveOrUpdateHierarchy = this.saveOrUpdateHierarchy.bind(this);
     }
@@ -29,7 +29,7 @@ class CreateHierarchyComponent extends Component {
                 let hierarchy = res.data;
                 this.setState({firstName: hierarchy.firstName,
                     lastName: hierarchy.lastName,
-                    nik : hierarchy.nik,
+                    nIK : hierarchy.nIK,
                     posId : hierarchy.posId
                 });
             });
@@ -39,7 +39,7 @@ class CreateHierarchyComponent extends Component {
 
     saveOrUpdateHierarchy = (e) => {
         e.preventDefault();
-        let hierarchy = {firstName: this.state.firstName, lastName: this.state.lastName, nik: this.state.nik, posId: this.state.posId};
+        let hierarchy = {firstName: this.state.firstName, lastName: this.state.lastName, nIK: this.state.nIK, posId: this.state.posId};
         console.log('hierarchy => ' + JSON.stringify(hierarchy));
 
         if(this.state.id === '_add'){
@@ -63,8 +63,8 @@ class CreateHierarchyComponent extends Component {
         this.setState({lastName: event.target.value});
     }
 
-    changenikHandler= (event) => {
-        this.setState({nik: event.target.value});
+    changenIKHandler= (event) => {
+        this.setState({nIK: event.target.value});
     }
     changeposIdHandler= (event) => {
         this.setState({posId: event.target.value});
@@ -104,8 +104,8 @@ class CreateHierarchyComponent extends Component {
                                     </div>
                                     <div className = "form-group">
                                         <label> NIK </label>
-                                        <input placeholder="NIK" name="nik" className="form-control"
-                                            value={this.state.nik} onChange={this.changenikHandler}/>
+                                        <input placeholder="NIK" name="nIK" className="form-control"
+                                            value={this.state.nIK} onChange={this.changenIKHandler}/>
                                     </div>
                                     <div className = "form-group">
                                         <label> Pos id </label>

@@ -26,7 +26,7 @@ class ListLeaveOfAbsenceComponent extends Component {
     }
 
     editLeaveOfAbsence(id){
-        this.props.history.push(`/leaveofabsence/${id}`);
+        this.props.history.push(`/add-leaveofabsence/${id}`);
     }
 
     componentDidMount(){
@@ -53,10 +53,10 @@ class ListLeaveOfAbsenceComponent extends Component {
                                 <table className = "table table-striped table-bordered">
                                     <thead>
                                         <tr>
-                                            <th> Leave of Absence NIK</th>
-                                            <th> Leave of Absence Leave Id</th>
-                                            <th> Leave of Absence Type of Leave</th>
-                                            <th> Leave of Absence Amount of Leave</th>
+                                            <th> NIK</th>
+                                            <th> Leave Id</th>
+                                            <th> Type of Leave</th>
+                                            <th> Amount of Leave</th>
                                         </tr>
                                     </thead>
 
@@ -65,10 +65,10 @@ class ListLeaveOfAbsenceComponent extends Component {
                                             this.state.leaveofabsence.map(
                                                 leaveofabsence =>
                                                 <tr key = {leaveofabsence.id}>
-                                                    <td> {leaveofabsence.nik} </td>
-                                                    <td> {leaveofabsence.leave_id} </td>
-                                                    <td> {leaveofabsence.type_of_leave} </td>
-                                                    <td> {leaveofabsence.amount_of_leave} </td>
+                                                    <td> {leaveofabsence.nIK} </td>
+                                                    <td> {leaveofabsence.leaveId} </td>
+                                                    <td> {leaveofabsence.typeOfLeave} </td>
+                                                    <td> {leaveofabsence.amountOfLeave} </td>
                                                     <td>
                                                         <button onClick = { () => this.editLeaveOfAbsence(leaveofabsence.id)} className="btn btn-info">Update</button>
                                                         <button style= {{marginLeft: "10px"}} onClick = { () => this.deleteLeaveOfAbsence(leaveofabsence.id)} className="btn btn-danger">Delete</button>

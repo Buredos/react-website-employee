@@ -55,8 +55,23 @@ class ListEmployeeComponent extends Component {
                                         <tr>
                                             <th> Employee First Name</th>
                                             <th> Employee Last Name</th>
-                                            <th> Employee Email Id</th>
+                                            <th> Employee NIK</th>
+                                            <th> Address </th>
+                                            <th> Phone Number </th>
+                                            <th> Gender </th>
+                                            <th> Religion </th>
+                                            <th> Birthday Date </th>
+                                            <th> Birth Place </th>
+                                            <th> Marital Status </th>
+                                            <th> Day Entered </th>
+                                            <th> Day Left </th>
                                             <th> Actions</th>
+
+
+
+
+
+                                            
                                         </tr>
                                     </thead>
 
@@ -67,7 +82,16 @@ class ListEmployeeComponent extends Component {
                                                 <tr key = {employee.id}>
                                                     <td> {employee.firstName} </td>
                                                     <td> {employee.lastName} </td>
-                                                    <td> {employee.emailId} </td>
+                                                    <td> {employee.nIK} </td>
+                                                    <td> {employee.Address} </td>
+                                                    <td> {employee.phoneNumber} </td>
+                                                    <td> {employee.Gender} </td>
+                                                    <td> {employee.Religion} </td>
+                                                    <td> {employee.birthDayDate} </td>
+                                                    <td> {employee.birthPlace} </td>
+                                                    <td> {employee.maritalStatus} </td>
+                                                    <td> {employee.dayEnterCompany} </td>
+                                                    <td> {employee.dayOutCompany} </td>
                                                     <td>
                                                         <button onClick = { () => this.editEmployee(employee.id)} className="btn btn-info">Update</button>
                                                         <button style= {{marginLeft: "10px"}} onClick = { () => this.deleteEmployee(employee.id)} className="btn btn-danger">Delete</button>
